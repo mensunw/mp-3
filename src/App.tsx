@@ -1,9 +1,12 @@
+import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router";
 
 function App() {
 
   return (
     <>
-      hi
+      <Routes>
+        <Route />
+      </Routes>
     </>
   )
 }
