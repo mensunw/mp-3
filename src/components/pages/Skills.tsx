@@ -25,10 +25,18 @@ const StyledUl = styled.ul`
   }
 `
 
+const StyledH2 = styled.h2`
+  font-size: calc(30px + 2vw);
+  color: #343a40;
+  font-family: 'Saira Extra Condensed', Serif;
+  font-weight: 700;
+  text-transform: uppercase;
+`
+
 export default function Skills() {
   return (
     <>
-      <h2> Skills </h2>
+      <StyledH2> Skills </StyledH2>
 
       <h3>Programming Languages &amp; Tools</h3>
       <StyledUl>

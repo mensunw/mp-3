@@ -26,7 +26,7 @@ const StyledUl = styled.ul`
   }
 `
 
-const StyledH1 = styled.h1`
+const StyledH2 = styled.h2`
   font-size: calc(30px + 2vw);
   color: #343a40;
   font-family: 'Saira Extra Condensed', Serif;
@@ -37,7 +37,7 @@ const StyledH1 = styled.h1`
 export default function Home() {
   return (
     <>
-      <StyledH1> Home </StyledH1>
+      <StyledH2> Home </StyledH2>
 
       <p>Hi, I'm Mensun Wang, a Computer Science student at Boston University with a strong passion for full-stack
         development and machine learning. I am dedicated to exploring their applications in solving real-world

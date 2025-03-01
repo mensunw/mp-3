@@ -8,10 +8,18 @@ const StyledP = styled.p`
   padding-left: calc(1px + 2vw);
 `
 
+const StyledH2 = styled.h2`
+  font-size: calc(30px + 2vw);
+  color: #343a40;
+  font-family: 'Saira Extra Condensed', Serif;
+  font-weight: 700;
+  text-transform: uppercase;
+`
+
 export default function Experience() {
   return (
     <>
-      <h2> Experience </h2>
+      <StyledH2> Experience </StyledH2>
 
       <StyledBlock>
         <div>

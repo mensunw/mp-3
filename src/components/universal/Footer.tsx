@@ -14,6 +14,10 @@ const StyledFooter = styled.footer`
   flex-shrink: 1;
   flex-wrap: nowrap;
   flex-basis: auto;
+
+  @media screen and (max-width: 1000px) {
+    height: calc(50px + 15vw);
+  }
 `
 const StyledA = styled.a`
   color: white;

@@ -10,8 +10,12 @@ const StyledP = styled.p`
   padding-left: calc(1px + 2vw);
 `
 
-const StyledOutput = styled.div`
+const StyledOutputPositive = styled.div`
   color: #868e96;
+`
+
+const StyledOutputNegative = styled.div`
+  color: red;
 `
 
 const StyledInput = styled.input`
@@ -35,50 +39,101 @@ const StyledClear = styled.button`
   }
 `
 
+const StyledButton = styled.button`
+  border: 2px solid black
+`
+
+const StyledH2 = styled.h2`
+  font-size: calc(30px + 2vw);
+  color: #343a40;
+  font-family: 'Saira Extra Condensed', Serif;
+  font-weight: 700;
+  text-transform: uppercase;
+`
+
 export default function Projects() {
   // setting default to string for "empty" reasons
-  const [inputOne, setInputOne] = useState<String>('')
-  const [inputTwo, setInputTwo] = useState<String>('')
+  const [inputOne, setInputOne] = useState<string>('')
+  const [inputTwo, setInputTwo] = useState<string>('')
+  const [result, setResult] = useState<string>('')
+  // for every function, set to negative if negative, which will trigger red style container instead
+  const [negative, setNegative] = useState<boolean>(false)
 
   // clear function
   function clearInput() {
     setInputOne('')
     setInputTwo('')
+    setResult('')
   }
 
   // add function
   function addInput() {
-    setInputOne('')
-    setInputTwo('')
+    const res: number = Number(inputOne) + Number(inputTwo)
+    setResult(String(res))
+    // negative check
+    if (res < 0) {
+      setNegative(true)
+    } else {
+      setNegative(false)
+    }
   }
 
   // sub function
   function subInput() {
-    setInputOne('')
-    setInputTwo('')
+    const res: number = Number(inputOne) - Number(inputTwo)
+    setResult(String(res))
+    // negative check
+    if (res < 0) {
+      setNegative(true)
+    } else {
+      setNegative(false)
+    }
   }
 
   // mult function
   function multInput() {
-    setInputOne('')
-    setInputTwo('')
+    const res: number = Number(inputOne) * Number(inputTwo)
+    setResult(String(res))
+    // negative check
+    if (res < 0) {
+      setNegative(true)
+    } else {
+      setNegative(false)
+    }
   }
 
   // div function
   function divInput() {
-    setInputOne('')
-    setInputTwo('')
+    const res: number = Number(inputOne) / Number(inputTwo)
+    setResult(String(res))
+    // negative check
+    if (res < 0) {
+      setNegative(true)
+    } else {
+      setNegative(false)
+    }
   }
 
-  // add function
+  // pow function
   function powInput() {
-    setInputOne('')
-    setInputTwo('')
+    const num1: number = Number(inputOne)
+    const num2: number = Number(inputTwo)
+    let res = 1;
+    for (let i = 0; i < num2; i++) {
+      res = res * num1;
+    }
+    setResult(String(res))
+    // negative check
+    if (res < 0) {
+      setNegative(true)
+    } else {
+      setNegative(false)
+    }
   }
 
   return (
     <>
-      <h2> Projects </h2>
+      <StyledH2> Projects </StyledH2>
 
       <StyledBlock>
         <div>
@@ -102,31 +157,37 @@ export default function Projects() {
 
       <StyledBlock>
         <div>
-          <h3> A cool lil' calculator | HTML, CSS, JS</h3>
-          n1: <StyledInput type="text" />
+          <h3> A cool lil' calculator | React</h3>
+          {/* update state to whatever the input is, put value as the state incase of clear */}
+          n1: <StyledInput type="text" onChange={(e) => setInputOne(e.target.value)} value={inputOne} />
 
-          n2: <StyledInput type="text" />
+          n2: <StyledInput type="text" onChange={(e) => setInputTwo(e.target.value)} value={inputTwo} />
           <StyledClear onClick={clearInput} id="clear"> Clear </StyledClear>
 
           <StyledUl>
             <li>
-              <button onClick={addInput}> + </button>
+              <StyledButton onClick={addInput}> + </StyledButton>
             </li>
             <li>
-              <button onClick={subInput}> - </button>
+              <StyledButton onClick={subInput}> - </StyledButton>
             </li>
             <li>
-              <button onClick={multInput}> * </button>
+              <StyledButton onClick={multInput}> * </StyledButton>
             </li>
             <li>
-              <button onClick={divInput}> / </button>
+              <StyledButton onClick={divInput}> / </StyledButton>
             </li>
             <li>
-              <button onClick={powInput}> ** </button>
+              <StyledButton onClick={powInput}> ** </StyledButton>
             </li>
           </StyledUl>
+          {/* show result from state here based on output and if negative or not */}
+          {negative ? (
+            <StyledOutputNegative>{result}</StyledOutputNegative>
+          ) : (
+            <StyledOutputPositive>{result}</StyledOutputPositive>
+          )}
 
-          <StyledOutput></StyledOutput>
         </div>
         <StyledP>Feburary 2025 - Present</StyledP>
       </StyledBlock>

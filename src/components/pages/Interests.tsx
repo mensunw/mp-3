@@ -1,9 +1,18 @@
+import styled from 'styled-components';
+
+const StyledH2 = styled.h2`
+  font-size: calc(30px + 2vw);
+  color: #343a40;
+  font-family: 'Saira Extra Condensed', Serif;
+  font-weight: 700;
+  text-transform: uppercase;
+`
 
 export default function Interests() {
   return (
     <>
       {/* interests */}
-      <h2> Interests </h2>
+      <StyledH2> Interests </StyledH2>
       <p>
         Apart from being a student, I enjoy hanging out with others, cracking puzzles, and creating real-world impact
         applications. I also indulge in several

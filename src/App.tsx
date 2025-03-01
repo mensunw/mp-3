@@ -29,7 +29,7 @@ const StyledPageWrapper = styled.div`
 const StyledBody = styled.div`
   font-family: 'Open Sans', Serif;
   color: #868e96;
-  font-size: calc(10px + 0.5vw);
+  font-size: calc(8px + 0.5vw);
   background-color: rgb(202, 240, 255);
 `
 

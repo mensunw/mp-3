@@ -16,10 +16,25 @@ const StyledImg = styled.img`
   margin: 2%;
 `
 
+const StyledImgTwo = styled.img`
+  width: 8vw;
+  border-radius: 50%;
+  display: inline;
+  margin: 2%;
+`
+
+const StyledH2 = styled.h2`
+  font-size: calc(30px + 2vw);
+  color: #343a40;
+  font-family: 'Saira Extra Condensed', Serif;
+  font-weight: 700;
+  text-transform: uppercase;
+`
+
 export default function Education() {
   return (
     <>
-      <h2> Education </h2>
+      <StyledH2> Education </StyledH2>
 
       <StyledBlock>
         <div>
@@ -36,7 +51,7 @@ export default function Education() {
           <StyledP>Computer Science Program</StyledP>
           <StyledP>GPA: 3.9</StyledP>
         </div>
-        <StyledImg src="/bhs.png" />
+        <StyledImgTwo src="/bhs.png" />
       </StyledBlock>
     </>
   )
