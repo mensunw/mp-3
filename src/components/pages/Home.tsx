@@ -11,7 +11,6 @@ const StyledUl = styled.ul`
   padding: 0;
   align-items: center;
   gap: 10px;
-  font-size: calc(20px + 2vw);
 
   /* These are set by default, but I wanted to write it out for clarity */
   flex-direction: row;
@@ -19,6 +18,12 @@ const StyledUl = styled.ul`
   flex-shrink: 1;
   flex-wrap: nowrap;
   flex-basis: auto;
+
+  /* Override any default styles for svg size */
+  svg {
+    width: calc(20px + 2vw) !important;  
+    height: calc(20px + 2vw) !important;
+  }
 `
 
 const StyledH1 = styled.h1`

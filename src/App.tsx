@@ -44,6 +44,9 @@ const StyledContainer = styled.div`
   flex-wrap: nowrap;
   flex-basis: auto;
   align-items: stretch;
+  @media screen and (max-width: 1000px) {
+    flex-direction: column;
+  }
 `
 
 const StyledMain = styled.div`
@@ -61,6 +64,10 @@ const StyledMain = styled.div`
   flex-shrink: 1;
   flex-wrap: nowrap;
   flex-basis: auto;
+
+  @media screen and (max-width: 1000px) {
+    height: 70vh;
+  }
 `
 
 function Root() {

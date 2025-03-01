@@ -13,6 +13,13 @@ const StyledHeader = styled.header`
   flex-shrink: 1;
   flex-wrap: nowrap;
   flex-basis: auto;
+
+  @media screen and (max-width: 1000px) {
+  /* Align center */
+  display: block;
+  text-align: center;
+  padding-bottom: 5px;
+  }
 `
 
 const StlyedH1 = styled.h1`

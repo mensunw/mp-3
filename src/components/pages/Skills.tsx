@@ -11,13 +11,18 @@ const StyledUl = styled.ul`
   padding: 0;
   align-items: center;
   gap: 20px;
-  font-size: calc(20px + 2vw);
 
   /* These are set by default, but I wanted to write it out for clarity */
   flex-direction: row;
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
+
+  /* Override any default styles for svg size */
+  svg {
+    width: calc(20px + 2vw) !important;  
+    height: calc(20px + 2vw) !important;
+  }
 `
 
 export default function Skills() {

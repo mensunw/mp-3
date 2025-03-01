@@ -22,6 +22,11 @@ const StyledNav = styled.nav`
   flex-shrink: 1;
   flex-wrap: nowrap;
   flex-basis: auto;
+
+  @media screen and (max-width: 1000px) {
+    min-width: 100%;
+    max-width: 100%;
+  }
 `
 
 const StyledUl = styled.ul`
@@ -37,6 +42,12 @@ const StyledUl = styled.ul`
   flex-shrink: 1;
   flex-wrap: nowrap;
   flex-basis: auto;
+
+  @media screen and (max-width: 1000px) {
+    flex-direction: row;
+    padding-bottom: 10px;
+    gap: calc(1px + 0.5vw);
+  }
 `
 
 const StyledLi = styled.li`
