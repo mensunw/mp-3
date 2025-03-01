@@ -81,6 +81,7 @@ function Root() {
           <StyledContainer>
             <Nav />
             <StyledMain>
+              {/* all routes */}
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/education" element={<Education />} />

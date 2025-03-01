@@ -36,6 +36,7 @@ const StyledH2 = styled.h2`
 export default function Skills() {
   return (
     <>
+      {/* my list of icons representing skills I have */}
       <StyledH2> Skills </StyledH2>
 
       <h3>Programming Languages &amp; Tools</h3>

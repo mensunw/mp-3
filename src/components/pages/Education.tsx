@@ -34,6 +34,7 @@ const StyledH2 = styled.h2`
 export default function Education() {
   return (
     <>
+      {/* education*/}
       <StyledH2> Education </StyledH2>
 
       <StyledBlock>

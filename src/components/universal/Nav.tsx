@@ -139,6 +139,7 @@ const StyledGlass5 = styled.div`
 export default function Nav() {
   return (
     <StyledNav>
+      {/* uses the router to link each nav component */}
       <StyledImg src="/profile.jpg" alt="photo of Mensun Wang" id="pfp" />
       <StyledUl>
         <StyledLink to="/">

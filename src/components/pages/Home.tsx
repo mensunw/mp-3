@@ -37,6 +37,7 @@ const StyledH2 = styled.h2`
 export default function Home() {
   return (
     <>
+      {/* home page */}
       <StyledH2> Home </StyledH2>
 
       <p>Hi, I'm Mensun Wang, a Computer Science student at Boston University with a strong passion for full-stack
