@@ -18,12 +18,46 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const StyledPageWrapper = styled.div`
+  width: 80vw;
+  margin: 0 auto;
+`
+
+const StyledBody = styled.div`
   font-family: 'Open Sans', Serif;
   color: #868e96;
   font-size: calc(10px + 0.5vw);
   background-color: rgb(202, 240, 255);
-  width: 80vw;
-  margin: 0 auto;
+`
+
+const StyledContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /* These are set by default, but I wanted to write it out for clarity */
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  flex-basis: auto;
+  align-items: stretch;
+`
+
+const StyledMain = styled.div`
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #faebd7;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 13%;
+  gap: 6vh;
+  background-image: url("/oak-plank.png");
+  /* These are set by default, but I wanted to write it out for clarity */
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-wrap: nowrap;
+  flex-basis: auto;
+  height: 70vh;
 `
 
 function Root() {
@@ -31,21 +65,22 @@ function Root() {
   return (
     <>
       <GlobalStyles />
-      <StyledPageWrapper>
-        <Header />
-        <div id="container">
-          <Nav />
-          <main>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/education" element={<Education />} />
-              <Route path="/footer" element={<Footer />} />
-            </Routes>
-          </main>
-        </div>
-        <Footer />
-
-      </StyledPageWrapper>
+      <StyledBody>
+        <StyledPageWrapper>
+          <Header />
+          <StyledContainer>
+            <Nav />
+            <StyledMain>
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/education" element={<Education />} />
+                <Route path="/footer" element={<Footer />} />
+              </Routes>
+            </StyledMain>
+          </StyledContainer>
+          <Footer />
+        </StyledPageWrapper>
+      </StyledBody>
     </>
   )
 }
