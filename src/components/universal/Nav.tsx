@@ -46,7 +46,7 @@ const StyledUl = styled.ul`
   @media screen and (max-width: 1000px) {
     flex-direction: row;
     padding-bottom: 10px;
-    gap: calc(1px + 0.5vw);
+    gap: calc(0px + 0.5vw);
   }
 `
 

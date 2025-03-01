@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const StyledBlock = styled.div`
   justify-content: space-between;
@@ -40,7 +40,10 @@ const StyledClear = styled.button`
 `
 
 const StyledButton = styled.button`
-  border: 2px solid black
+  border: 2px solid black;
+  &:hover {
+    background: rgb(162, 199, 233);
+  }
 `
 
 const StyledH2 = styled.h2`
