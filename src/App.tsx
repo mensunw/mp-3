@@ -8,6 +8,10 @@ import Footer from "./components/universal/Footer.tsx";
 
 import Home from "./components/pages/Home.tsx";
 import Education from "./components/pages/Education.tsx";
+import Skills from "./components/pages/Skills.tsx";
+import Experience from "./components/pages/Experience.tsx";
+import Projects from "./components/pages/Projects.tsx";
+import Interests from "./components/pages/Interests.tsx";
 
 /* for global styles (Re-set browser defaults & make all box sizes include padding and border) */
 const GlobalStyles = createGlobalStyle`
@@ -31,6 +35,7 @@ const StyledBody = styled.div`
 
 const StyledContainer = styled.div`
   width: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: row;
   /* These are set by default, but I wanted to write it out for clarity */
@@ -42,7 +47,6 @@ const StyledContainer = styled.div`
 `
 
 const StyledMain = styled.div`
-  height: 80vh;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -57,7 +61,6 @@ const StyledMain = styled.div`
   flex-shrink: 1;
   flex-wrap: nowrap;
   flex-basis: auto;
-  height: 70vh;
 `
 
 function Root() {
@@ -74,7 +77,10 @@ function Root() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/education" element={<Education />} />
-                <Route path="/footer" element={<Footer />} />
+                <Route path="/skills" element={<Skills />} />
+                <Route path="/experience" element={<Experience />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/interests" element={<Interests />} />
               </Routes>
             </StyledMain>
           </StyledContainer>

@@ -21,11 +21,18 @@ const StyledUl = styled.ul`
   flex-basis: auto;
 `
 
+const StyledH1 = styled.h1`
+  font-size: calc(30px + 2vw);
+  color: #343a40;
+  font-family: 'Saira Extra Condensed', Serif;
+  font-weight: 700;
+  text-transform: uppercase;
+`
 
 export default function Home() {
   return (
     <>
-      <h2> Home </h2>
+      <StyledH1> Home </StyledH1>
 
       <p>Hi, I'm Mensun Wang, a Computer Science student at Boston University with a strong passion for full-stack
         development and machine learning. I am dedicated to exploring their applications in solving real-world
