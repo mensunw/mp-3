@@ -53,7 +53,7 @@ const StyledUl = styled.ul`
 const StyledLi = styled.li`
   display: flex;
   background: rgba(16, 12, 12, 0.037);
-  width: calc(40px + 5vw);
+  width: calc(30px + 5vw);
   align-items: center;
   justify-content: center;
   border: 3px solid rgba(134, 161, 166, 0.6);
@@ -89,8 +89,8 @@ const StyledLink = styled(Link)`
 const StyledGlass1 = styled.div`
   position: absolute;
   background-color: rgba(134, 161, 166, 0.6);
-  height: 4px;
-  width: 4px;
+  height: calc(2px + 0.1vw);
+  width: calc(2px + 0.1vw);
   top: 20%;
   left: 9.5%;
   border: 1px solid rgba(134, 161, 166, 0.6);
@@ -99,8 +99,8 @@ const StyledGlass1 = styled.div`
 const StyledGlass2 = styled.div`
   position: absolute;
   background-color: rgba(134, 161, 166, 0.6);
-  height: 4px;
-  width: 4px;
+  height: calc(2px + 0.1vw);
+  width: calc(2px + 0.1vw);
   top: 35%;
   left: 6%;
   border: 1px solid rgba(134, 161, 166, 0.6);
@@ -109,8 +109,8 @@ const StyledGlass2 = styled.div`
 const StyledGlass3 = styled.div`
   position: absolute;
   background-color: rgba(134, 161, 166, 0.6);
-  height: 4px;
-  width: 4px;
+  height: calc(2px + 0.1vw);
+  width: calc(2px + 0.1vw);
   top: 51%;
   left: 2.5%;
   border: 1px solid rgba(134, 161, 166, 0.6);
@@ -119,8 +119,8 @@ const StyledGlass3 = styled.div`
 const StyledGlass4 = styled.div`
   position: absolute;
   background-color: rgba(134, 161, 166, 0.6);
-  height: 4px;
-  width: 4px;
+  height: calc(2px + 0.1vw);
+  width: calc(2px + 0.1vw);
   top: 51%;
   left: 90%;
   border: 1px solid rgba(134, 161, 166, 0.6);
@@ -129,8 +129,8 @@ const StyledGlass4 = styled.div`
 const StyledGlass5 = styled.div`
   position: absolute;
   background-color: rgba(134, 161, 166, 0.6);
-  height: 4px;
-  width: 4px;
+  height: calc(2px + 0.1vw);
+  width: calc(2px + 0.1vw);
   top: 69%;
   left: 86.5%;
   border: 1px solid rgba(134, 161, 166, 0.6);
