@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router';
 
 const StyledBlock = styled.div`
   justify-content: space-between;
@@ -61,6 +62,18 @@ export default function Projects() {
   const [result, setResult] = useState<string>('')
   // for every function, set to negative if negative, which will trigger red style container instead
   const [negative, setNegative] = useState<boolean>(false)
+
+  /* set title based on url */
+  const currentPath = useParams();
+  let lastValue = Object.values(currentPath).pop() || "";
+  lastValue = lastValue.charAt(0).toUpperCase() + lastValue.slice(1);
+  useEffect(() => {
+    if (lastValue === "") {
+      document.title = "Home | Resume";
+    } else {
+      document.title = lastValue + " | Resume";
+    }
+  }, [lastValue])
 
   // clear function
   function clearInput() {

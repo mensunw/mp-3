@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { useEffect } from 'react';
+import { useParams } from 'react-router';
 
 const StyledH2 = styled.h2`
   font-size: calc(30px + 2vw);
@@ -9,6 +11,17 @@ const StyledH2 = styled.h2`
 `
 
 export default function Interests() {
+  /* set title based on url */
+  const currentPath = useParams();
+  let lastValue = Object.values(currentPath).pop() || "";
+  lastValue = lastValue.charAt(0).toUpperCase() + lastValue.slice(1);
+  useEffect(() => {
+    if (lastValue === "") {
+      document.title = "Home | Resume";
+    } else {
+      document.title = lastValue + " | Resume";
+    }
+  }, [lastValue])
   return (
     <>
       {/* interests */}
